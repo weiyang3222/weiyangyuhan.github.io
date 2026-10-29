@@ -7,7 +7,7 @@
 <div class="toolbar"><div class="bar"><h1>学术网站 · 可视化资料编辑器</h1><div class="bar-actions"><a class="button secondary" style="text-decoration:none" href="index.html" target="_blank">查看网站 ↗</a><button class="button" id="download">保存修改并下载</button></div></div></div>
 <main class="wrap"><div class="actions-top"><div><div class="small">CONTENT EDITOR / NO CODE REQUIRED</div><h2>以后更新论文，只需要在这里修改。</h2><p class="lead">这不是在线后台，而是可离线打开的编辑页面。修改后点击顶部「保存修改并下载」，会得到一个新的 <code>content.js</code> 文件。把它替换到网站文件夹或 GitHub 仓库，内容就会更新。</p></div></div>
 <div class="note"><strong>隐私提醒：</strong>公开网站默认不显示私人手机号和详细地址。本编辑器中填写的邮箱等资料会出现在公开网站上。个人照片可以选择性上传（会嵌入导出的资料文件）；PDF 简历单独替换 <code>assets/Bin_Zhao_Public_CV.pdf</code>。</div>
-<section class="panel"><h2>1. 个人信息</h2><div class="grid" id="basicFields"></div><div class="field"><label>网站首页标题</label><input id="headline"></div><div class="field"><label>个人研究简介（英文）</label><textarea id="introduction" rows="5"></textarea></div><div class="field"><label>个人照片（可选，只在本地读取）</label><input id="photoUpload" type="file" accept="image/jpeg,image/png,image/webp"><div class="hint" id="photoStatus">尚未上传照片，网站会显示 BZ 字母头像。推荐使用小于 1 MB 的正方形照片。</div></div></section>
+<section class="panel"><h2>1. 个人信息</h2><div class="grid" id="basicFields"></div><div class="field"><label>网站首页标题</label><input id="headline"></div><div class="field"><label>个人研究简介（英文）</label><textarea id="introduction" rows="5"></textarea></div><div class="field"><label>个人照片（可选，只在本地读取）</label><input id="photoUpload" type="file" accept="image/jpeg,image/png,image/webp"><div class="hint" id="photoStatus">尚未上传照片，网站会显示离子嵌入晶格示意图。推荐使用小于 1 MB 的正方形照片。</div></div></section>
 <section class="panel"><h2>2. 研究方向</h2><div id="researchEntries"></div><button class="button secondary" data-add="research">＋ 添加研究方向</button></section>
 <section class="panel"><h2>3. 发表论文</h2><p class="hint">作者、期刊和 DOI 可以直接粘贴，不需要手动修改网页。</p><div id="publicationEntries"></div><button class="button secondary" data-add="publications">＋ 添加一篇论文</button></section>
 <section class="panel"><h2>4. 教育经历</h2><div id="educationEntries"></div><button class="button secondary" data-add="education">＋ 添加教育经历</button></section>
@@ -16,3 +16,4 @@
 <div class="note"><strong>更新流程：</strong>① 本地打开 <code>editor.html</code> → ② 填内容 → ③ 点击「保存修改并下载」 → ④ 用新下载的 <code>content.js</code> 替换原文件 → ⑤ 上传到 GitHub。如果网站已经部署，GitHub Pages 会在重新发布后显示更新的内容。</div>
 <button class="button" id="downloadBottom">保存修改并下载 content.js</button><span class="status" id="status" aria-live="polite"></span>
 </main><script src="content.js"></script><script src="editor.js"></script></body></html>
+

@@ -3,7 +3,8 @@
 const src=window.ACADEMIC_PROFILE||{};
 const copy=typeof structuredClone==='function'?structuredClone(src):JSON.parse(JSON.stringify(src));
 const $=id=>document.getElementById(id);
-const field=(label,value,kind='input')=>{const outer=document.createElement('div');outer.className='field';const lab=document.createElement('label');lab.textContent=label;const input=document.createElement(kind);if(kind==='textarea'){input.rows=2;input.value=value??'';}else{input.type='text';input.value=value??'';}outer.append(lab,input);return {outer,input};};
+let fieldCounter=0;
+const field=(label,value,kind='input')=>{const outer=document.createElement('div');outer.className='field';const lab=document.createElement('label');lab.textContent=label;const input=document.createElement(kind);input.id='edit-field-'+(++fieldCounter);lab.htmlFor=input.id;if(kind==='textarea'){input.rows=2;input.value=value??'';}else{input.type='text';input.value=value??'';}outer.append(lab,input);return {outer,input};};
 const basic=[['name','英文姓名'],['initials','头像缩写'],['position','身份或职位'],['institution','学校 / 联合培养单位'],['lab','课题组'],['location','所在城市'],['advisor','导师'],['email','学校邮箱'],['googleScholar','Google Scholar URL'],['orcid','ORCID URL'],['github','GitHub URL']];
 const basicInput={};basic.forEach(([key,label])=>{const obj=field(label,src[key]);$('basicFields').append(obj.outer);basicInput[key]=obj.input;});
 ['headline','introduction'].forEach(k=>$(k).value=src[k]||'');
