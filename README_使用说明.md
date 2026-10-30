@@ -1,54 +1,58 @@
-# Bin Zhao 学术个人主页（简历自动填充版）
+# Bin Zhao's Academic Website (CV-Populated Version)
 
-这是根据你上传的简历生成的英文个人学术主页，不需要数据库或服务器运维。
+This English-language academic website was generated from the CV you provided. No database or server maintenance is required.
 
-## 最简单的使用方式
+## Getting Started: The Easiest Way
 
-1. 解压网站 ZIP 包。
-2. 双击 `index.html`，在浏览器中查看个人网站。
-3. 双击 `editor.html`，打开**可视化编辑器**。以后修改姓名、简介、研究方向、论文等，直接在这里填入内容。
-4. 在编辑器顶部点击“保存修改并下载”，浏览器会下载一个新文件 `content.js`。
-5. 把下载的 `content.js` 覆盖原网站文件夹中的同名文件，刷新 `index.html` 就能看到更新。
+1. Extract the website ZIP archive.
+2. Double-click `index.html` to preview your website in a browser.
+3. Double-click `editor.html` to open the **visual editor**. To update your name, biography, research interests, publications, or other information, simply edit the corresponding fields.
+4. Click **Save Changes and Download** at the top of the editor. Your browser will download an updated `content.js` file.
+5. Replace the existing `content.js` in your website folder with the downloaded file, then refresh `index.html` to see your changes.
 
-**特别注意：** 如果你在浏览器里编辑完数据，尚未点击“保存修改并下载”就关闭网页，修改不会保存。浏览器弹出的“保存到哪里”可以选网站文件夹；如果保存到了下载文件夹，记得将它复制覆盖原文件。
+**Important:** Changes made in the browser will not be saved unless you click **Save Changes and Download** before closing the page. If your browser asks where to save the file, you can select your website folder. If the file is saved to your Downloads folder instead, remember to copy it into the website folder and replace the existing file.
 
-## 一键式发布（GitHub Pages）
+## Publishing with GitHub Pages
 
-1. 前往 https://github.com/ 注册 / 登录。
-2. 创建一个**公开**仓库，仓库名为 `你的GitHub用户名.github.io`。
-3. 在仓库页面选择 `Add file → Upload files`，把此网站文件夹中的文件与 `assets` 文件夹上传（不要只上传 ZIP 包）。
-4. 进入仓库 `Settings → Pages`，设置 `Build and deployment → Deploy from a branch`，选择 `main` 分支、`/(root)` 目录并保存。
-5. 网站发布后可在 `https://你的GitHub用户名.github.io` 访问。
+1. Go to https://github.com/ and sign up or sign in.
+2. Create a **public** repository named `your-github-username.github.io`, replacing `your-github-username` with your actual GitHub username.
+3. On the repository page, select **Add file → Upload files**. Upload the files from the extracted website folder, including the `assets` folder (do not upload only the ZIP archive).
+4. Go to **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**, choose the `main` branch and `/(root)` folder, and save.
+5. Once published, your website will be available at `https://your-github-username.github.io`.
 
-之后更新网站时：**你只需要在浏览器编辑 `editor.html`，下载新的 `content.js`，再到 GitHub 仓库页面上传并覆盖这个文件即可**。
+To update the published website later, **simply edit your content in `editor.html`, download the updated `content.js`, and upload it to your GitHub repository to replace the existing file**.
 
-## 更省事：直接把新简历交给 ChatGPT
+## Even Easier: Update Your Website Through ChatGPT
 
-无需使用编辑器。你也可以将新的 PDF 简历、论文 DOI 或研究照片发到 ChatGPT，让其根据新信息重新生成网站文件，然后上传覆盖 GitHub 仓库对应文件。
+You do not have to use the editor. You can also upload an updated PDF CV, share a new publication DOI, or provide research photos to ChatGPT. ChatGPT can then help generate the updated website files, which you can upload to replace the corresponding files in your GitHub repository.
 
-## 上传个人照片
+## Adding a Profile Photo
 
-在 `editor.html` 的“个人照片”部分选择 JPG、PNG、WEBP 照片，点击保存就会把照片直接嵌入新 `content.js`，不需要额外上传图片文件。照片建议低于 1 MB；允许最大 3 MB。
+In the **Profile Photo** section of `editor.html`, select a JPG, PNG, or WEBP image. When you save your changes, the image will be embedded directly into the new `content.js` file, so no separate image upload is required.
 
-## 更新可下载的 CV
+For best results, use an image smaller than 1 MB. The maximum supported file size is 3 MB.
 
-网站中的 CV 文件是 `assets/Bin_Zhao_Public_CV.pdf`，是根据上传简历制作的公开版，**已排除私人电话号码和详细街道地址**。要更新 CV，只需用新的、适合公开的同名 PDF 覆盖它。
+## Updating the Downloadable CV
 
-## 文件说明
+The downloadable CV is stored at `assets/Bin_Zhao_Public_CV.pdf`. It is a public version prepared from your uploaded CV, **with your personal phone number and full street address removed**.
 
-- `index.html`：网站首页（不需要自己修改）
-- `styles.css`：网站样式（不需要自己修改）
-- `site.js`：页面运行逻辑（不需要自己修改）
-- `content.js`：**唯一需要更新的内容文件**
-- `editor.html` 和 `editor.js`：可视化编辑页面
-- `assets/Bin_Zhao_Public_CV.pdf`：供访客下载的公开学术简历
-- `assets/favicon.svg`：网站图标
-- `.nojekyll`：GitHub Pages 部署辅助文件
+To update it, replace this file with a new, publicly shareable PDF using the same filename.
 
-## 已纳入信息与待完善内容
+## File Structure
 
-已纳入：姓名、学校、联合培养信息、导师、学校邮箱、研究兴趣、4 篇论文、教育经历、荣誉、专利、会议报告、科研技能。
+- `index.html` — Website homepage (no manual editing required)
+- `styles.css` — Website styles (no manual editing required)
+- `site.js` — Website functionality (no manual editing required)
+- `content.js` — **The only content file you need to update**
+- `editor.html` and `editor.js` — Visual editor
+- `assets/Bin_Zhao_Public_CV.pdf` — Public CV available for download
+- `assets/favicon.svg` — Website icon
+- `.nojekyll` — Configuration file for GitHub Pages deployment
 
-待完善：本人确认的肖像照片、Google Scholar 和 ORCID 链接、更多科研图片和项目成果。没有确认的链接默认不展示。
+## Included Information and Items to Complete
 
-如希望彻底不接触代码与 GitHub 文件，可以使用 Notion Sites 或 Google Sites。另提供了可导入 Notion 的 Markdown 主页草稿 `Notion_个人学术主页.md`。
+**Already included:** Name, university, joint Ph.D. program details, advisor, university email address, research interests, four publications, educational background, honors and awards, patent, conference presentation, and research skills.
+
+**Still to add:** A confirmed profile photo, Google Scholar and ORCID profile links, additional research images, and project highlights. Links that have not been confirmed are hidden by default.
+
+If you prefer not to deal with code or GitHub files at all, you can use Notion Sites or Google Sites instead. A draft academic homepage in Markdown format, `Notion_个人学术主页.md`, is also provided for import into Notion.
