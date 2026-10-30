@@ -55,7 +55,7 @@ window.ACADEMIC_PROFILE = {
     {
       year: 2025,
       title: "Quantifying Hydrogen Chemical Diffusivity in NdNiO3 Thin Films through Operando Multimodal Measurements",
-      authors: "Luhan Wei, Haowen Chen, Zihan Xu, Yuxin Hu, Bin Zhao, Ying Lu, Nan Zhang, and Qiyang Lu",
+      authors: "Luhan Wei, Haowen Chen, Zihan Xu, Yuxin Hu, Bin Zhao, Ying Lu, Nian Zhang, and Qiyang Lu",
       journal: "Nano Letters",
       citation: "25(15), 6348–6355 (2025)",
       doi: "10.1021/acs.nanolett.5c01527",
